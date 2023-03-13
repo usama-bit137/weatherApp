@@ -5,8 +5,10 @@ export default function setLayout() {
   const searchInput = document.createElement("input");
   const searchLabel = document.createElement("label");
 
+  const celsiusButton = document.createElement("button");
+  celsiusButton.textContent = "°C";
+
   searchLabel.setAttribute("for", "title");
-  searchLabel.textContent = "title:";
   searchLabel.classList.add("title-element");
   formElement.appendChild(searchLabel);
 
@@ -21,6 +23,7 @@ export default function setLayout() {
   searchBtn.setAttribute("type", "button");
   searchBtn.textContent = "Check Weather";
   formElement.appendChild(searchBtn);
+  formElement.appendChild(celsiusButton);
   header.textContent = "Wheather?";
 
   header.appendChild(formElement);

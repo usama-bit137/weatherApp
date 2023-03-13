@@ -11,8 +11,6 @@ async function fetchWeather() {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=2bd361fd896a074e2c8c2fce72989c80`, {
     mode: "cors",
   }).then((response) => response.json()).then((response) => {
-    console.log(response.name);
-    console.log(response.main);
     const information = WeatherFactory(response.name, response.main);
     console.log(information);
     return information;
@@ -21,7 +19,16 @@ async function fetchWeather() {
   });
 }
 
+/*
+  This is the button press event which will trigger the fetch
+*/
 searchBtn.addEventListener("click", () => {
-  location = document.getElementById("search-bar").value;
-  fetchWeather();
+  const searchField = document.getElementById("search-bar");
+  location = searchField.value;
+  if (location === "") {
+    throw ("Please enter a valid location");
+  } else {
+    fetchWeather();
+    searchField.value = "";
+  }
 });
