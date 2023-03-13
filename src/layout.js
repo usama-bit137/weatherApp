@@ -1,11 +1,11 @@
 export default function setLayout() {
   const body = document.querySelector("body");
   const header = document.createElement("header");
-  const formElement = document.createElement("form"); 
+  const formElement = document.createElement("form");
   const searchInput = document.createElement("input");
   const searchLabel = document.createElement("label");
-  
-  searchLabel.setAttribute ("for", "title");
+
+  searchLabel.setAttribute("for", "title");
   searchLabel.textContent = "title:";
   searchLabel.classList.add("title-element");
   formElement.appendChild(searchLabel);
@@ -22,9 +22,9 @@ export default function setLayout() {
   searchBtn.textContent = "Check Weather";
   formElement.appendChild(searchBtn);
   header.textContent = "Wheather?";
-  
+
   header.appendChild(formElement);
   header.classList.add("grid-container");
-  
+
   body.appendChild(header);
 }
