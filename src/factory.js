@@ -1,8 +1,8 @@
-export const WeatherFactory = location => {
-  const getLocation = () => location;
-  const getCurrentTemp = () => currentTemp; 
-  const getCurrentWind = () => currentWind;
-  const getCurrentFeel = () => CurrentFeel; 
-
-  return { location, currentTemp, currentWind, currentFeel }
+export const WeatherFactory = (name, main) => {
+  const location =  name;
+  const currentTemp =  main.temp; 
+  const pressure =  main.pressure;
+  const feelLike = main.feels_like; 
+  
+  return { location, currentTemp, pressure, feelLike }
 }

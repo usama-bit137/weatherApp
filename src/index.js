@@ -4,11 +4,6 @@ import { WeatherFactory } from "./factory";
 
 setLayout();
 
-// We are going to have an input in a search-bar, whose value 
-// we will input to the factory function.
-
-// This location bit will be a by user input, but London
-// is a good placeholder for now.
 const searchBtn = document.getElementById("search-btn");
 let location = "";
 
@@ -18,9 +13,11 @@ async function fetchWeather() {
 }).then((response) => {
   return response.json()
 }).then((response) => {
-  // we will save these in some sort of 
   console.log(response.name)
   console.log(response.main)
+  const information = WeatherFactory(response.name, response.main);
+  console.log(information)
+  return information
 }).catch(() => {
   throw("Error fetching weather data from OpenWeatherApi!")
 });
