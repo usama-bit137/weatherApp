@@ -24,3 +24,25 @@ button {
   border-radius: 20px;
   font-size: 20px; 
 }
+
+section { 
+  border: 2px solid blue; 
+  height: 100%;
+}
+
+section > * {
+  border: 2px solid red;
+  height: 100px; 
+  width: 161px;  
+}
+
+.card {
+  border: 1px solid red;
+  margin:auto; 
+}
+
+.card > * {
+  border: 1px solid red; 
+  height: 23px; 
+  text-align: center;
+}

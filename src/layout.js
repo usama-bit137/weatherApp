@@ -1,10 +1,10 @@
 export default function setLayout() {
   const body = document.querySelector("body");
   const header = document.createElement("header");
+  const section = document.createElement("section");
   const formElement = document.createElement("form");
   const searchInput = document.createElement("input");
   const searchLabel = document.createElement("label");
-
   const celsiusButton = document.createElement("button");
   celsiusButton.textContent = "°C";
 
@@ -26,8 +26,25 @@ export default function setLayout() {
   formElement.appendChild(celsiusButton);
   header.textContent = "Wheather?";
 
+  const itemDiv = document.createElement("div");
+  itemDiv.setAttribute("class", "card");
+  const locationDiv = document.createElement("div");
+  locationDiv.setAttribute("class", "name-div");
+  const tempDiv = document.createElement("div");
+  tempDiv.setAttribute("class", "temp");
+  const pressureDiv = document.createElement("div");
+  pressureDiv.setAttribute("class", "pressure");
+  const feelsLike = document.createElement("div");
+  feelsLike.setAttribute("class", "feels");
+
+  itemDiv.appendChild(locationDiv);
+  itemDiv.appendChild(tempDiv);
+  itemDiv.appendChild(pressureDiv);
+  itemDiv.appendChild(feelsLike);
+
+  section.appendChild(itemDiv);
   header.appendChild(formElement);
   header.classList.add("grid-container");
-
   body.appendChild(header);
+  body.appendChild(section);
 }
