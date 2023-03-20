@@ -5,8 +5,6 @@ export default function setLayout() {
   const formElement = document.createElement("form");
   const searchInput = document.createElement("input");
   const searchLabel = document.createElement("label");
-  const celsiusButton = document.createElement("button");
-  celsiusButton.textContent = "°C";
 
   searchLabel.setAttribute("for", "title");
   searchLabel.classList.add("title-element");
@@ -23,13 +21,14 @@ export default function setLayout() {
   searchBtn.setAttribute("type", "button");
   searchBtn.textContent = "Check Weather";
   formElement.appendChild(searchBtn);
-  formElement.appendChild(celsiusButton);
   header.textContent = "Wheather?";
 
   const itemDiv = document.createElement("div");
   itemDiv.setAttribute("class", "card");
   const locationDiv = document.createElement("div");
   locationDiv.setAttribute("class", "name-div");
+  const descDiv = document.createElement("div");
+  descDiv.setAttribute("class", "desc");
   const tempDiv = document.createElement("div");
   tempDiv.setAttribute("class", "temp");
   const pressureDiv = document.createElement("div");
@@ -39,6 +38,7 @@ export default function setLayout() {
 
   itemDiv.appendChild(locationDiv);
   itemDiv.appendChild(tempDiv);
+  itemDiv.appendChild(descDiv);
   itemDiv.appendChild(pressureDiv);
   itemDiv.appendChild(feelsLike);
 

@@ -1,12 +1,29 @@
+@font-face {
+  font-family: "Orbitron";
+  src: url(./fonts/static/Orbitron-Regular.ttf) format('truetype');
+
+}
+
 body {
   padding: 0; 
   margin: 0;
+  
+  background: url(img/northernlights.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+* { 
+  font-family: "Orbitron"; 
 }
 
 header {
   display: grid;
-  border: 1px solid red;
   font-size: 50px;
+  color: white; 
+  margin: auto;
 }
 
 form {
@@ -14,7 +31,6 @@ form {
 }
 
 input {
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
   font-size: 20px;
   font-weight: bold; 
 }
@@ -23,26 +39,56 @@ button {
   border: 0; 
   border-radius: 20px;
   font-size: 20px; 
+  margin-left: 50px;
 }
 
-section { 
-  border: 2px solid blue; 
+section {  
   height: 100%;
 }
 
 section > * {
-  border: 2px solid red;
-  height: 100px; 
-  width: 161px;  
+  font-size: 25px; 
+  width: 250px;  
+}
+
+img {
+  width: 200px;
+  position: relative;
+  left: 50%;
+  top: 25%; 
+  margin: -100px;
+  animation: rotation 3s infinite forwards ease-in-out; 
+}
+
+@keyframes rotation {
+  0% { 
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform : rotate(360deg);
+  }
 }
 
 .card {
-  border: 1px solid red;
-  margin:auto; 
+  margin: auto; 
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 500px;
 }
 
 .card > * {
-  border: 1px solid red; 
-  height: 23px; 
   text-align: center;
+  color: white; 
+  width: 300px;
+  margin: auto;
+  padding: 20px;
 }
+
+.name-div {
+  font-size: 50px;
+  border-bottom: 1px solid grey;
+}
+
+.descDiv, .tempDiv, .feelDiv{
+  border-bottom: 1px solid grey;
+} 
