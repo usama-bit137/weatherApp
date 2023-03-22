@@ -40,6 +40,7 @@ async function fetchWeather() {
 }
 
 searchBtn.addEventListener("click", () => {
+  card.classList.remove("hidden");
   const searchField = document.getElementById("search-bar");
   location = searchField.value;
   const loadingImg = document.createElement("img");
@@ -51,6 +52,7 @@ searchBtn.addEventListener("click", () => {
   } else {
     body.appendChild(loadingImg);
     setTimeout(() => {
+      card.classList.add("show");
       fetchWeather();
       searchField.value = "";
       body.removeChild(loadingImg);

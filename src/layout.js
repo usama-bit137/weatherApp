@@ -25,6 +25,7 @@ export default function setLayout() {
 
   const itemDiv = document.createElement("div");
   itemDiv.setAttribute("class", "card");
+  itemDiv.classList.add("hidden");
   const locationDiv = document.createElement("div");
   locationDiv.setAttribute("class", "name-div");
   const descDiv = document.createElement("div");

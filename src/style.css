@@ -33,13 +33,19 @@ form {
 input {
   font-size: 20px;
   font-weight: bold; 
+  border: 0; 
+  height: 50px; 
+  border-radius: 50px;
+  padding: 10px;
 }
 
 button {
   border: 0; 
-  border-radius: 20px;
+  border-radius: 50px;
+  padding: 5px 20px; 
   font-size: 20px; 
   margin-left: 50px;
+  height: 50px; 
 }
 
 section {  
@@ -71,9 +77,18 @@ img {
 }
 
 .card {
-  margin: auto; 
+  display: none; 
+  margin: 50px auto; 
   background-color: rgba(0, 0, 0, 0.6);
   width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .card > * {
