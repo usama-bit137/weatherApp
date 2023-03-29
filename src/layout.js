@@ -1,4 +1,11 @@
+import image from "./img/sun.png";
+
 export default function setLayout() {
+  const head = document.querySelector("head");
+  const icon = document.createElement("link");
+  icon.setAttribute("href", image);
+  icon.setAttribute("rel", "icon");
+  head.appendChild(icon);
   const body = document.querySelector("body");
   const header = document.createElement("header");
   const section = document.createElement("section");
