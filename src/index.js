@@ -1,4 +1,5 @@
 import "./style.css";
+import image from "./img/sun.png";
 import setLayout from "./layout";
 import { WeatherFactory } from "./factory";
 
@@ -43,8 +44,8 @@ searchBtn.addEventListener("click", () => {
   card.classList.remove("hidden");
   const searchField = document.getElementById("search-bar");
   location = searchField.value;
-  const loadingImg = document.createElement("img");
-  loadingImg.src = "../src/img/sun.png";
+  const loadingImg = new Image();
+  loadingImg.src = image;
   loadingImg.classList.add(".loading");
 
   if (location === "") {

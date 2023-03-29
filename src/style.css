@@ -7,7 +7,7 @@
 body {
   padding: 0; 
   margin: 0;
-  
+
   background: url(img/northernlights.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -62,7 +62,7 @@ img {
   position: relative;
   left: 50%;
   top: 25%; 
-  margin: -100px;
+  margin: -100px; 
   animation: rotation 3s infinite forwards ease-in-out; 
 }
 
