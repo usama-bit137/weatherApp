@@ -32,7 +32,7 @@ form {
   gap: 50px;  
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   form {
     display: flex;
     flex-direction: column;
@@ -52,9 +52,9 @@ input {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   input {
-     min-width: 600px; 
+     min-width: 500px; 
      margin: auto; 
    }
  }
